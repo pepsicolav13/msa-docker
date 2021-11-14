@@ -1,4 +1,4 @@
-# 도커 쿠버네티스 워크샵
+# Spring Cloud와 Docker를 이용한 MSA 핵심
 
 ## Contents
 
