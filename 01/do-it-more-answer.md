@@ -44,7 +44,7 @@ javac Hello.java
 ```
 
 ```bash
-FROM openjdk:8-jdk-alpine
+FROM openjdk:11.0.13-jdk
 COPY Hello.class .
 CMD ["java", "Hello"]
 ```
@@ -89,6 +89,8 @@ base, social Dockerfile 둘다 동일
 ```bash
 # Dockerfile
 FROM openjdk:8-jdk-alpine
+# jdk 11로 설치를 했다면 아래 base 이미지 사용
+# FROM openjdk:11.0.13-jdk
 ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} app.jar
 CMD ["java","-jar","/app.jar"]
