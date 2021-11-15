@@ -57,8 +57,10 @@ docker run hello
 ## 03 #2
 
 ```bash
-FROM openjdk:8-jdk-alpine
-COPY Web.class .
+FROM openjdk:11.0.13-jdk
+
+COPY Web.java .
+RUN javac Web.java
 CMD ["java", "Web"]
 ```
 
